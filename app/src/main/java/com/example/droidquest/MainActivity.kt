@@ -2,6 +2,7 @@ package com.example.droidquest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
@@ -9,6 +10,10 @@ import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
+    companion object{
+        private val TAG = "QuestActivity"
+        private val KEY_INDEX = "index"
+    }
 
     private lateinit var mTrueButton: Button
     private lateinit var mFalseButton: Button
@@ -20,14 +25,44 @@ class MainActivity : AppCompatActivity() {
         Question(R.string.question_linear, false),
         Question(R.string.question_service, false),
         Question(R.string.question_res, true),
-        Question(R.string.question_manifest, true)
+        Question(R.string.question_manifest, true),
+        Question(R.string.new1, true),
+        Question(R.string.new2, true),
+        Question(R.string.new3, true),
+        Question(R.string.new4, true),
+        Question(R.string.new5, true)
     )
     private var mCurrentIndex = 0
 
+    override fun onStart() {
+        super.onStart()
+        Log.d(TAG, "onStart() вызван")
+    }
+    override fun onPause() {
+        super.onPause()
+        Log.d(TAG, "onPause() вызван")
+    }
+    override fun onResume() {
+        super.onResume()
+        Log.d(TAG, "onResume() вызван")
+    }
+    override fun onStop() {
+        super.onStop()
+        Log.d(TAG, "onStop() вызван")
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(TAG, "onDestroy() вызван")
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Log.d(TAG, "onCreate(Bundle) вызван")
+        if (savedInstanceState != null) {
+            mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
+        }
+
         mQuestionTextView = findViewById(R.id.question_text_view)
         mQuestionTextView.setOnClickListener {
             mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.size
@@ -56,6 +91,12 @@ class MainActivity : AppCompatActivity() {
         updateQuestion()
 
     }
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        Log.i(TAG, "onSaveInstanceState")
+        outState!!.putInt(KEY_INDEX, mCurrentIndex)
+    }
+
     private fun updateQuestion() {
         val question = mQuestionBank[mCurrentIndex].textResId
         mQuestionTextView.setText(question)

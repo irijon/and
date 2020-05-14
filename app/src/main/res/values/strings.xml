@@ -18,5 +18,10 @@ Linux.</string>
 файле XML.</string>
     <string name="question_manifest">AndroidManifest.xml предоставляет
 системе основную информацию о программе.</string>
+    <string name="new1">Первым устройством, работающим под управлением Android, стал смартфон HTC Dream.</string>
+    <string name="new2">Кроме смартфонов и планшетов, операционную систему Android устанавливают и на другие устройства.</string>
+    <string name="new3">В Android 4.4 появилась возможность сменить виртуальную машину Dalvik на ART (Android Runtime).</string>
+    <string name="new4">В Android 5 перерисован дизайн, базирующийся на концепции Material Design, добавлен режим энергосбережения Project Volta, выбор машины пропал, вместо Dalvik стала использоваться ART.</string>
+    <string name="new5">В Android 6 появился интеллектуальный режим расхода энергии Doze и запрет выхода в Интернет и работы в фоне давно не используемых приложений App Standby.</string>
 
 </resources>
