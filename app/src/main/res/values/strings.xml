@@ -23,5 +23,10 @@ Linux.</string>
     <string name="new3">В Android 4.4 появилась возможность сменить виртуальную машину Dalvik на ART (Android Runtime).</string>
     <string name="new4">В Android 5 перерисован дизайн, базирующийся на концепции Material Design, добавлен режим энергосбережения Project Volta, выбор машины пропал, вместо Dalvik стала использоваться ART.</string>
     <string name="new5">В Android 6 появился интеллектуальный режим расхода энергии Doze и запрет выхода в Интернет и работы в фоне давно не используемых приложений App Standby.</string>
+    <string name="warning_text">Вы уверены, что хотите это сделать?</string>
+    <string name="show_answer_button">Показать ответ</string>
+    <string name="deceit_button">Обмануть !</string>
+    <string name="judgment_toast">Обманывать нельзя.</string>
+    <string name="title_activity_deceit">Deceit</string>
 
 </resources>

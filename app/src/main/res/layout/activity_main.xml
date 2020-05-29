@@ -39,6 +39,12 @@
             android:layout_gravity="bottom|right"
             android:src="@drawable/left" />
 
+        <Button
+            android:id="@+id/deceit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:text="@string/deceit_button" />
         <ImageButton
             android:id="@+id/next_button"
             android:layout_width="wrap_content"
